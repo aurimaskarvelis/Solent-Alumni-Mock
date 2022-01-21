@@ -1,0 +1,420 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Montserrat', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    background: #f0f0f0;
+    overflow-x: hidden;
+}
+
+/*--- ---*/
+
+.header-wrap{
+    padding: 20px 40px;
+    position: absolute;
+    width: 100vw
+}
+
+.header-wrap #header{
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-wrap .access ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-wrap .access ul a{
+    margin: 0px 20px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.header-wrap .access ul li:first-child a:after{
+    opacity: 1;
+}
+
+.header-wrap .access ul a:after{
+    content:"";
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background: red;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    opacity: 0;
+}
+
+.header-wrap .access ul li:last-child{
+    margin-right: 0px;
+}
+
+.logo img{
+    width: 150px;
+}
+
+#wrapper{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0px 40px;
+}
+
+#wrapper h2{
+    margin: 0px 10px 20px 10px;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.btn a{
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    background: #e20613;
+}
+
+/*-- Hero --*/
+
+.hero{
+    position: relative;
+    overflow: hidden;
+    padding: 250px 0px 150px;
+}
+
+.hero:before{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background:url(https://www.solent.ac.uk/image-library/alumni/alumni-main-banner.jpg);
+    z-index: -1;
+    filter: blur(2px);
+    transform: scale(1.2);
+}
+
+.hero:after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(-140deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+    z-index: -1;
+}
+
+.hero .hero-wrapper{
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.hero .hero-wrapper h1,
+.hero .hero-wrapper h2{
+    color: #fff;
+}
+
+.hero .column{
+    width: 50%;
+}
+
+.hero .column:last-child{
+    padding-left: 100px;
+}
+
+.hero .column:first-child p{
+    font-size: 20px;
+    color: #fff;
+    line-height: 40px;
+    max-width: 420px;
+}
+
+/*-- News --*/
+
+.news-item{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin: 10px 0px;
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.news-item .news-image{
+    height: 100px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.news-item img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.news-item .news-holder{
+    margin-left: 20px;
+    background: #fff;
+    padding: 0px 20px;
+}
+
+.news-item a{
+    text-decoration: none;
+    color: #000;
+}
+
+.news-item span{
+    font-size: 14px;
+    color: #e20613;
+}
+
+.news-item .news-holder h3{
+    margin-bottom: 0px;
+}
+
+/*-- How We can Help --*/
+
+.how-can-we-help{
+    margin: 100px 0px;
+}
+
+.hcwh-row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hcwh-block{
+    margin: 10px;
+    flex: 0 1 calc(50% - 20px);
+    background: #fff;
+}
+
+.hcwh-block .hcwh-img{
+    height: 200px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.hcwh-block .hcwh-content{
+    padding: 30px;
+}
+
+.hcwh-block .hcwh-content p{
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+/*-- Graduations --*/
+
+.graduations{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.graduations .graduations__block{
+    margin: 10px;
+    flex: 0 1 calc(33.33% - 20px);
+    min-height: 400px;
+    position: relative;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.graduations .graduations__block:after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    z-index: 1;
+}
+
+.graduations .graduations__block h3{
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin-bottom: 0px;
+    z-index: 10;
+}
+
+/*-- Connect --*/
+
+.connect{
+    margin: 150px 0px;
+}
+
+.connect .connect-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.connect .connect-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    margin: 10px;
+    flex: 0 1 calc(50% - 20px);
+    text-align: center;
+    background: blue;
+    min-height: 300px;
+}
+
+.connect .connect-block.fb{
+    background: #3b5998;
+}
+
+.connect .connect-block.twitter{
+    background: #00acee;
+}
+
+.connect .connect-block.instagram{
+    background: #833AB4;
+}
+
+.connect .connect-block.linkedin{
+    background: #0e76a8;
+}
+
+.connect .connect-block i{
+    color: #fff;
+    font-size: 35px;
+}
+
+.connect .connect-block span{
+    display: block;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/*-- Footer --*/
+
+footer{
+    background: rgb(11, 0, 53);
+    padding: 200px 0px 50px;
+}
+
+footer .footer-container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0px 40px;
+}
+
+footer .widget-area{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .widget-area h3{
+    color: #fff;
+}
+
+footer .widget-area .widget{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .widget-area .widget a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 20px;
+    margin: 5px 0px;
+}
+
+footer #colophon{
+    margin: 250px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer #colophon span,
+footer #colophon a{
+    color: #fff;
+    text-decoration: none;
+}
